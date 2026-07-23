@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <!-- BALISE ESSENTIELLE POUR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>GEAUDIO - Extraits Audio</title>
     <!-- Lien Google Fonts (Nohemi) -->
     <link href="https://fonts.googleapis.com/css2?family=Nohemi&display=swap" rel="stylesheet">
@@ -14,20 +18,32 @@
             color: #1a1a1a;
         }
 
+        /* En-tête flexible pour éviter les chevauchements */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-top: 80px; /* Laisse la place au logo sur mobile */
+        }
+
         /* Style du Logo */
         .logo {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
-            max-width: 120px;
+            max-width: 80px; /* Un poil plus petit sur mobile pour respirer */
             height: auto;
         }
 
-        /* Style du Menu */
+        /* Style du Menu Responsive */
         .menu {
-            margin-top: 30px;
-            margin-bottom: 80px;
-            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap; /* Permet aux mots de revenir à la ligne proprement si l'écran est petit */
+            justify-content: center;
+            gap: 15px; /* Espace régulier entre les liens */
         }
 
         .menu a {
@@ -36,9 +52,8 @@
             text-decoration: none;
             color: #1a1a1a;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin: 0 20px;
-            font-size: 14px;
+            letter-spacing: 1px;
+            font-size: 12px; /* Légèrement réduit pour mobile */
             transition: color 0.3s ease;
         }
 
@@ -50,13 +65,13 @@
         .content {
             max-width: 600px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             letter-spacing: 2px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         /* Bloc Lecteur Audio */
@@ -64,13 +79,13 @@
             background: #f9f9f9;
             border: 1px solid #eaeaea;
             border-radius: 8px;
-            padding: 30px;
+            padding: 20px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .audio-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 8px;
             text-transform: uppercase;
@@ -78,7 +93,7 @@
         }
 
         .audio-subtitle {
-            font-size: 14px;
+            font-size: 13px;
             color: #666666;
             margin-bottom: 20px;
         }
@@ -87,15 +102,40 @@
             width: 100%;
             outline: none;
         }
+
+        /* CONFIGURATION POUR LES ÉCRANS D'ORDINATEUR (Agrandissement) */
+        @media (min-width: 768px) {
+            header {
+                padding-top: 20px;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .logo {
+                top: 20px;
+                max-width: 120px; /* Reprend sa taille initiale sur ordinateur */
+            }
+            .menu {
+                margin-top: 30px;
+                margin-bottom: 80px;
+                gap: 40px;
+            }
+            .menu a {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Logo -->
+        <!-- Logo (L'oreille) -->
         <img src="assets/images/LOGO.png" alt="Mon Logo" class="logo">
         
-        <!-- Votre Menu à 5 rubriques -->
+        <!-- Menu -->
         <nav class="menu">
             <a href="index.html">Accueil</a>
             <a href="audiobank.html">Extraits Audio</a>
@@ -110,12 +150,11 @@
 
         <!-- Premier Player -->
         <div class="audio-card">
-            <div class="audio-title">Vulfgroove / Projet</div>
+            <div class="audio-title">VULFGROOVE / PROJET</div>
             <div class="audio-subtitle">Mixage / Mastering / Création sonore</div>
             
-            <!-- Le lecteur HTML5 -->
             <audio controls>
-                <source src="assets/sons/VulfLike.wav" type="audio/wav">
+                <source src="assets/sons/extrait1.mp3" type="audio/mpeg">
                 Votre navigateur ne prend pas en charge l'écoute de ce fichier.
             </audio>
         </div>
