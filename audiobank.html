@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GEAUDIO - Réalisations</title>
+    <title>GEAUDIO - Extraits Audio</title>
     <!-- Lien Google Fonts (Nohemi) -->
     <link href="https://fonts.googleapis.com/css2?family=Nohemi&display=swap" rel="stylesheet">
     <style>
@@ -46,9 +46,9 @@
             color: #666666;
         }
 
-        /* Contenu */
+        /* Contenu Principal */
         .content {
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -56,35 +56,70 @@
         h1 {
             font-size: 36px;
             letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Bloc Lecteur Audio */
+        .audio-card {
+            background: #f9f9f9;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .audio-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .audio-subtitle {
+            font-size: 14px;
+            color: #666666;
             margin-bottom: 20px;
         }
 
-        .confirmation-text {
-            font-size: 18px;
-            color: #666666;
-            line-height: 1.6;
+        audio {
+            width: 100%;
+            outline: none;
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- Logo -->
         <img src="assets/images/LOGO.png" alt="Mon Logo" class="logo">
         
-<nav class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="audiobank.html">Extraits Audio</a>
-    <a href="presentation.html">Présentation</a>
-    <a href="index.html#projets">Projets</a>
-    <a href="depot.html">Dépôt</a>
-</nav>
+        <!-- Votre Menu à 5 rubriques -->
+        <nav class="menu">
+            <a href="index.html">Accueil</a>
+            <a href="audiobank.html">Extraits Audio</a>
+            <a href="presentation.html">Présentation</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="depot.html">Dépôt</a>
+        </nav>
     </header>
 
     <main class="content">
-        <h1>RÉALISATIONS</h1>
-        <p class="confirmation-text">
-            Tu es bien sur la page dédiée à mes dernières créations audio. Le lien fonctionne parfaitement !
-        </p>
+        <h1>EXTRAITS AUDIO</h1>
+
+        <!-- Premier Player -->
+        <div class="audio-card">
+            <div class="audio-title">Vulfgroove / Projet</div>
+            <div class="audio-subtitle">Mixage / Mastering / Création sonore</div>
+            
+            <!-- Le lecteur HTML5 -->
+            <audio controls>
+                <source src="assets/sons/VulfLike.wav" type="audio/wav">
+                Votre navigateur ne prend pas en charge l'écoute de ce fichier.
+            </audio>
+        </div>
+
     </main>
 
 </body>
