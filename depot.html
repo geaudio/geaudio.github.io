@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GEAUDIO - Réalisations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GEAUDIO - Dépôt de fichiers</title>
     <!-- Lien Google Fonts (Nohemi) -->
     <link href="https://fonts.googleapis.com/css2?family=Nohemi&display=swap" rel="stylesheet">
     <style>
@@ -14,20 +17,32 @@
             color: #1a1a1a;
         }
 
+        /* En-tête flexible responsive */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+
         /* Style du Logo */
         .logo {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
-            max-width: 120px;
+            max-width: 80px;
             height: auto;
         }
 
-        /* Style du Menu */
+        /* Style du Menu Responsive */
         .menu {
-            margin-top: 30px;
-            margin-bottom: 80px;
-            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
 
         .menu a {
@@ -36,9 +51,8 @@
             text-decoration: none;
             color: #1a1a1a;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin: 0 20px;
-            font-size: 14px;
+            letter-spacing: 1px;
+            font-size: 12px;
             transition: color 0.3s ease;
         }
 
@@ -46,47 +60,103 @@
             color: #666666;
         }
 
-        /* Contenu */
+        /* Contenu Principal */
         .content {
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 28px;
             letter-spacing: 2px;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
-        .confirmation-text {
-            font-size: 18px;
+        .description {
+            font-size: 16px;
             color: #666666;
             line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        /* Style du Bouton de Dépôt Infomaniak */
+        .upload-btn {
+            display: inline-block;
+            font-family: 'Nohemi', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #1a1a1a; /* Bouton noir épuré */
+            padding: 18px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .upload-btn:hover {
+            background-color: #444444;
+            transform: translateY(-2px); /* Léger effet de survol moderne */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Configuration Écrans Ordinateur */
+        @media (min-width: 768px) {
+            header {
+                padding-top: 20px;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .logo {
+                top: 20px;
+                max-width: 120px;
+            }
+            .menu {
+                margin-top: 30px;
+                margin-bottom: 80px;
+                gap: 40px;
+            }
+            .menu a {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+            h1 {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- Logo (L'oreille) -->
         <img src="assets/images/LOGO.png" alt="Mon Logo" class="logo">
         
-<nav class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="audiobank.html">Extraits Audio</a>
-    <a href="presentation.html">Présentation</a>
-    <a href="index.html#projets">Projets</a>
-    <a href="depot.html">Dépôt</a>
-</nav>
+        <!-- Menu -->
+        <nav class="menu">
+            <a href="index.html">Accueil</a>
+            <a href="audiobank.html">Extraits Audio</a>
+            <a href="presentation.html">Présentation</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="depot.html">Dépôt</a>
+        </nav>
     </header>
 
     <main class="content">
-        <h1>RÉALISATIONS</h1>
-        <p class="confirmation-text">
-            Tu es bien sur la page dédiée au dépot. Le lien fonctionne parfaitement !
+        <h1>Dépôt de fichiers</h1>
+        <p class="description">
+            Vous souhaitez m'envoyer des pistes audio, un projet à mixer ou des documents techniques ? Cliquez sur le bouton ci-dessous pour accéder à ma boîte de dépôt sécurisée Infomaniak kDrive.
         </p>
+
+        <!-- Bouton vers Infomaniak (ouvre dans un nouvel onglet) -->
+        <a href="https://kdrive.infomaniak.com/app/drive/2187637/redirect/9" target="_blank" class="upload-btn">
+            Déposer mes fichiers
+        </a>
     </main>
 
 </body>
 </html>
-
