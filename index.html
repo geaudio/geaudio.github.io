@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>GEAUDIO - Accueil</title>
-    <!-- Liens Google Fonts (Nohemi + Pinyon Script pour la signature style vieux livre / plume) -->
-    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;700;900&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- Liens Google Fonts (Importation des différentes graisses de Nohemi : 200/Extra-Light, 300/Light, 800/Extra-Bold) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@200;300;800&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Nohemi', sans-serif;
             text-align: center;
@@ -13,6 +17,41 @@
             padding: 20px;
             background-color: #ffffff;
             color: #1a1a1a;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ----------------------------------------------------
+           AJOUT : Les 3 fines lignes verticales (de gauche à droite)
+           ---------------------------------------------------- */
+        .lines-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 5%; /* Ajuste ce pourcentage si tu veux décaler le bloc de lignes vers le centre ou le bord */
+            width: 30px; /* Espace global contenant les 3 lignes */
+            height: 100vh;
+            z-index: 1; /* Reste en arrière-plan sous les textes */
+            pointer-events: none; /* Permet de cliquer à travers les lignes sans bloquer le site */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .vertical-line {
+            width: 2px;
+            height: 100%;
+        }
+
+        .line-red { background-color: #CF3636; }
+        .line-yellow { background-color: #FDD107; }
+        .line-blue { background-color: #3881E2; }
+
+        /* ----------------------------------------------------
+           Structure et Navigation
+           ---------------------------------------------------- */
+        header {
+            position: relative;
+            z-index: 10;
         }
 
         /* Style du Logo en haut à droite */
@@ -20,11 +59,11 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            max-width: 200px; /* Réduit à 200px max */
+            max-width: 200px; /* Limité à 200px max */
             height: auto;
         }
 
-        /* Style du Menu en Majuscules */
+        /* Style du Menu */
         .menu {
             margin-top: 30px;
             margin-bottom: 80px;
@@ -36,7 +75,7 @@
             text-transform: uppercase;
             text-decoration: none;
             color: #1a1a1a;
-            font-weight: bold;
+            font-weight: 800; /* Nohemi Extra Bold pour le menu pour garder du caractère */
             letter-spacing: 2px;
             margin: 0 20px;
             font-size: 14px;
@@ -52,43 +91,68 @@
             max-width: 700px;
             margin: 0 auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 10;
         }
 
-        /* GEAUDIO plus droit, plus massif et plus typé titre */
+        /* ----------------------------------------------------
+           Typographies demandées
+           ---------------------------------------------------- */
+        
+        /* Titre en Nohemi Extra Bold */
         h1 {
             font-size: 54px;
-            font-weight: 900; /* Force le caractère très droit et massif de la police */
-            letter-spacing: 6px; /* Accentue l'effet bloc/titre */
+            font-weight: 800; 
+            letter-spacing: 4px;
             margin-bottom: 5px;
             text-transform: uppercase;
         }
 
+        /* Sous-titre en Nohemi Light */
         .subtitle {
             font-size: 18px;
+            font-weight: 300; 
             color: #666666;
             margin-bottom: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        /* Reste du texte en Nohemi Extra Light */
         .description {
             font-size: 18px;
+            font-weight: 200; 
             line-height: 1.6;
             margin-bottom: 40px;
+            letter-spacing: 0.5px;
         }
 
-        /* Style de la Signature "Vieux Livre / Plume" */
-        .signature {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 48px; /* Légèrement agrandie car cette police est plus fine */
-            color: #1a1a1a;
+        /* ----------------------------------------------------
+           SOLUTION SIGNATURE MANUSCRITE (IMAGE)
+           ---------------------------------------------------- */
+        .signature-container {
             margin-top: 20px;
             display: inline-block;
-            transform: rotate(-3deg); /* Donne un petit effet de signature naturelle à la main */
+        }
+
+        .signature-img {
+            max-width: 150px; /* Ajuste la largeur de ta signature ici */
+            height: auto;
+            /* L'effet de rotation légère est conservé pour le réalisme */
+            transform: rotate(-3deg); 
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
+
+    <!-- Container des 3 lignes verticales -->
+    <div class="lines-container">
+        <div class="vertical-line line-red"></div>
+        <div class="vertical-line line-yellow"></div>
+        <div class="vertical-line line-blue"></div>
+    </div>
 
     <header>
         <!-- Logo -->
@@ -113,7 +177,10 @@
             Bienvenue sur mon site, ici tu peux accéder à mes dernières créations, en savoir plus sur moi et déposer tes fichiers.
         </p>
         
-        <div class="signature">Genès</div>
+        <!-- Zone de la Signature intégrée à partir de ton fichier -->
+        <div class="signature-container">
+            <img src="assets/images/signature.png" alt="Signature Genès" class="signature-img">
+        </div>
     </main>
 
 </body>
