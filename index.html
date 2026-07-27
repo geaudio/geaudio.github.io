@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>GEAUDIO - Accueil</title>
-    <!-- Liens Google Fonts (Nohemi + Police Cursive pour la signature) -->
-    <link href="https://fonts.googleapis.com/css2?family=Nohemi&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <!-- Liens Google Fonts (Nohemi + Pinyon Script pour la signature style vieux livre / plume) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@400;700;900&family=Pinyon+Script&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Nohemi', sans-serif;
@@ -19,7 +20,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            max-width: 240px; /* Ajustez la taille ici si besoin */
+            max-width: 200px; /* Réduit à 200px max */
             height: auto;
         }
 
@@ -32,18 +33,18 @@
 
         .menu a {
             font-family: 'Nohemi', sans-serif;
-            text-transform: uppercase; /* Force les majuscules */
+            text-transform: uppercase;
             text-decoration: none;
             color: #1a1a1a;
             font-weight: bold;
-            letter-spacing: 2px; /* Espace un peu les lettres pour un style épuré */
+            letter-spacing: 2px;
             margin: 0 20px;
             font-size: 14px;
             transition: color 0.3s ease;
         }
 
         .menu a:hover {
-            color: #666666; /* Changement de couleur au survol */
+            color: #666666;
         }
 
         /* Contenu Principal */
@@ -53,10 +54,13 @@
             padding: 0 20px;
         }
 
+        /* GEAUDIO plus droit, plus massif et plus typé titre */
         h1 {
-            font-size: 48px;
-            letter-spacing: 4px;
+            font-size: 54px;
+            font-weight: 900; /* Force le caractère très droit et massif de la police */
+            letter-spacing: 6px; /* Accentue l'effet bloc/titre */
             margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
         .subtitle {
@@ -73,13 +77,14 @@
             margin-bottom: 40px;
         }
 
-        /* Style de la Signature */
+        /* Style de la Signature "Vieux Livre / Plume" */
         .signature {
-            font-family: 'Caveat', cursive;
-            font-size: 36px;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 48px; /* Légèrement agrandie car cette police est plus fine */
             color: #1a1a1a;
-            margin-top: 30px;
+            margin-top: 20px;
             display: inline-block;
+            transform: rotate(-3deg); /* Donne un petit effet de signature naturelle à la main */
         }
     </style>
 </head>
@@ -89,14 +94,14 @@
         <!-- Logo -->
         <img src="assets/images/LOGO.png" alt="Mon Logo" class="logo">
         
-        <!-- Menu en Majuscules -->
-<nav class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="audiobank.html">Extraits Audio</a>
-    <a href="presentation.html">Présentation</a>
-    <a href="projets.html">Projets</a>
-    <a href="depot.html">Dépôt</a>
-</nav>
+        <!-- Menu -->
+        <nav class="menu">
+            <a href="index.html">Accueil</a>
+            <a href="audiobank.html">Extraits Audio</a>
+            <a href="presentation.html">Présentation</a>
+            <a href="projets.html">Projets</a>
+            <a href="depot.html">Dépôt</a>
+        </nav>
     </header>
 
     <!-- Présentation -->
@@ -113,4 +118,3 @@
 
 </body>
 </html>
-
