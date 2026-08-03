@@ -56,12 +56,9 @@
 
         /* Style du Menu Responsive */
         .menu {
-            margin-top: 20px;
-            margin-bottom: 50px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            text-align: center;
         }
 
         .menu a {
@@ -69,9 +66,12 @@
             text-transform: uppercase;
             text-decoration: none;
             color: #1a1a1a;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin: 0 20px;
+            line-height: 1.2;
+            display: inline-block;
             transition: color 0.3s ease;
         }
 
@@ -126,22 +126,20 @@
         /* Configuration Écrans Ordinateur */
         @media (min-width: 768px) {
             header {
-                padding-top: 20px;
-                flex-direction: row;
-                justify-content: center;
+                padding-top: 0;
             }
             .logo {
                 top: 20px;
-                max-width: 120px;
+                max-width: 200px;
             }
             .menu {
                 margin-top: 30px;
                 margin-bottom: 80px;
-                gap: 40px;
             }
             .menu a {
                 font-size: 14px;
                 letter-spacing: 2px;
+                margin: 0 20px;
             }
             h1 {
                 font-size: 36px;
@@ -150,6 +148,12 @@
     </style>
 </head>
 <body>
+
+    <div class="lines-container">
+        <div class="vertical-line line-red"></div>
+        <div class="vertical-line line-yellow"></div>
+        <div class="vertical-line line-blue"></div>
+    </div>
 
     <header>
         <!-- Logo (L'oreille) -->

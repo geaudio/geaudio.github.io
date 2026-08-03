@@ -57,12 +57,9 @@
 
         /* Style du Menu Responsive */
         .menu {
-            margin-top: 20px;
-            margin-bottom: 50px;
-            display: flex;
-            flex-wrap: wrap; /* Permet aux mots de revenir à la ligne proprement si l'écran est petit */
-            justify-content: center;
-            gap: 15px; /* Espace régulier entre les liens */
+            margin-top: 30px;
+            margin-bottom: 80px;
+            text-align: center;
         }
 
         .menu a {
@@ -70,9 +67,12 @@
             text-transform: uppercase;
             text-decoration: none;
             color: #1a1a1a;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 12px; /* Légèrement réduit pour mobile */
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 0 20px;
+            font-size: 14px;
+            line-height: 1.2;
+            display: inline-block;
             transition: color 0.3s ease;
         }
 
@@ -125,22 +125,20 @@
         /* CONFIGURATION POUR LES ÉCRANS D'ORDINATEUR (Agrandissement) */
         @media (min-width: 768px) {
             header {
-                padding-top: 20px;
-                flex-direction: row;
-                justify-content: center;
+                padding-top: 0;
             }
             .logo {
                 top: 20px;
-                max-width: 120px; /* Reprend sa taille initiale sur ordinateur */
+                max-width: 200px;
             }
             .menu {
                 margin-top: 30px;
                 margin-bottom: 80px;
-                gap: 40px;
             }
             .menu a {
                 font-size: 14px;
                 letter-spacing: 2px;
+                margin: 0 20px;
             }
             h1 {
                 font-size: 36px;
@@ -164,7 +162,7 @@
         <nav class="menu">
             <a href="index.html">Accueil</a>
             <a href="audiobank.html">Extraits Audio</a>
-            <a href="presentation">Présentation</a>
+            <a href="presentation.html">Présentation</a>
             <a href="projets.html">Projets</a>
             <a href="depot.html">Dépôt</a>
         </nav>
