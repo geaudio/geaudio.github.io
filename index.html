@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>GEAUDIO - Accueil</title>
-    <!-- Liens Google Fonts (Importation des différentes graisses de Nohemi : 200/Extra-Light, 300/Light, 800/Extra-Bold) -->
-    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@200;300;800&display=swap" rel="stylesheet">
+    <!-- Liens Google Fonts (Importation des différentes graisses de Nohemi : 200/Extra-Light, 300/Light, 500/Medium, 800/Extra-Bold) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@200;300;500;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -113,8 +113,9 @@
         /* Sous-titre en Nohemi Light */
         .subtitle {
             font-size: 18px;
-            font-weight: 300; 
-            color: #666666;
+            font-family: 'Nohemi', sans-serif;
+            font-weight: 500;
+            color: #1f1f1f;
             margin-bottom: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -129,21 +130,15 @@
             letter-spacing: 0.5px;
         }
 
-        /* ----------------------------------------------------
-           SIGNATURE MANUSCRITE EN IMAGE
-           ---------------------------------------------------- */
-        .signature-container {
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        .signature-img {
-            max-width: 200px;
+        .centered-photo {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 320px;
             width: 100%;
             height: auto;
-            transform: rotate(-3deg);
-            display: block;
-            margin: 0 auto;
+            border: 2px solid #000000;
+            padding: 0;
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -178,11 +173,8 @@
         <p class="description">
             Bienvenue sur mon site, ici tu peux accéder à mes dernières créations, en savoir plus sur moi et déposer tes fichiers.
         </p>
-        
-        <!-- Signature manuscrite -->
-        <div class="signature-container">
-            <img src="assets/images/signature.png" alt="Signature Genès" class="signature-img">
-        </div>
+
+        <img src="assets/images/phototpflou.jpg" alt="Photo floue" class="centered-photo">
     </main>
 
 </body>
