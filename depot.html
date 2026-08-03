@@ -17,21 +17,40 @@
             color: #1a1a1a;
         }
 
-        /* En-tête flexible responsive */
-        header {
+        /* Lignes verticales sur la gauche */
+        .lines-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 12%;
+            width: 27px;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+        }
+
+        .vertical-line {
+            width: 3px;
+            height: 100%;
+        }
+
+        .line-red { background-color: #CF3636; }
+        .line-yellow { background-color: #FDD107; }
+        .line-blue { background-color: #3881E2; }
+
+        header {
             position: relative;
-            padding-top: 80px;
+            z-index: 10;
         }
 
         /* Style du Logo */
         .logo {
             position: absolute;
-            top: 10px;
+            top: 20px;
             right: 20px;
-            max-width: 80px;
+            max-width: 200px;
             height: auto;
         }
 
