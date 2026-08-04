@@ -95,8 +95,8 @@
 
         /* Bloc Lecteur Audio */
         .audio-card {
-            background: #f9f9f9;
-            border: 1px solid #eaeaea;
+            background: #ffffff;
+            border: 3px solid #CF3636;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 30px;
@@ -114,12 +114,31 @@
         .audio-subtitle {
             font-size: 13px;
             color: #666666;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .audio-date {
+            font-size: 10px;
+            color: #999999;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         audio {
             width: 100%;
             outline: none;
+            background-color: #ffffff;
+        }
+
+        /* Style pour le fond du lecteur audio */
+        audio::-webkit-media-controls-panel {
+            background-color: #ffffff;
+        }
+
+        /* Style pour la barre de progression */
+        audio::-webkit-media-controls-timeline {
+            background-color: #ffffff;
         }
 
         /* CONFIGURATION POUR LES ÉCRANS D'ORDINATEUR (Agrandissement) */
@@ -173,13 +192,14 @@
 
         <!-- Premier Player -->
         <div class="audio-card">
-            <div class="audio-title">VULFGROOVE / PROJET</div>
-            <div class="audio-subtitle">Mixage / Mastering / Création sonore</div>
+            <div class="audio-title">VULFGROOVE</div>
+            <div class="audio-subtitle">Session avec le bassiste Oscar sur l'esthétique de Vulfpeck. Enregistrer au studio</div>
             
-            <audio controls>
+            <audio controls controlsList="nodownload noplaybackrate">
                 <source src="assets/sons/VulfLike.wav" type="audio/mpeg">
                 Votre navigateur ne prend pas en charge l'écoute de ce fichier.
             </audio>
+            <div class="audio-date">04 août 2026</div>
         </div>
 
     </main>
