@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEAUDIO - Accueil</title>
     <!-- Liens Google Fonts (Importation des différentes graisses de Nohemi : 200/Extra-Light, 300/Light, 500/Medium, 800/Extra-Bold) -->
     <link href="https://fonts.googleapis.com/css2?family=Nohemi:wght@200;300;500;800&display=swap" rel="stylesheet">
@@ -163,6 +164,61 @@
             text-overflow: ellipsis;
             position: relative;
             z-index: 1;
+        }
+
+        /* RESPONSIVE MOBILE */
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+
+            .lines-container {
+                left: 8%;
+                width: 20px;
+            }
+
+            .logo {
+                max-width: 120px;
+                top: 10px;
+                right: 10px;
+            }
+
+            .menu {
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+
+            .menu a {
+                margin: 8px 10px;
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            h1 {
+                font-size: 32px;
+                letter-spacing: 2px;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .description {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .centered-photo {
+                max-width: 280px;
+                margin: 0 auto 20px auto;
+            }
+
+            .photo-credit {
+                font-size: 12px;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
